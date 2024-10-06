@@ -3,7 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>THEMESWITCH</title>
+    <style>
+        /* Navbar styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff; /* Light mode background */
+    color: #333; /* Light mode text color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Box shadow for navbar */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for dark mode */
+}
+
+nav.dark {
+    background-color: #333; /* Dark mode background */
+    color: #fff; /* Dark mode text color */
+}
+
+/* Text styles */
+.text {
+    font-size: 1.5rem;
+}
+
+/* Toggler styles */
+.toggler {
+    display: flex;
+    align-items: center;
+}
+
+/* Light and Dark labels */
+.light,
+.dark {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+/* Slider styles */
+.slider {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    background-color: #ccc; /* Slider background */
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for the slider */
+}
+
+.slider-circle {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: white; /* Circle color */
+    border-radius: 50%;
+    transition: transform 0.3s ease; /* Smooth transition for the circle */
+}
+
+/* When dark mode is active */
+nav.dark .slider {
+    background-color: #666; /* Slider background in dark mode */
+}
+
+nav.dark .slider-circle {
+    transform: translateX(20px); /* Move circle to the right in dark mode */
+}
+    </style>
 </head>
 <body>
     <div id="root"></div>
