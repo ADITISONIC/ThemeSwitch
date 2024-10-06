@@ -5,26 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THEMESWITCH</title>
     <style>
-        /* Navbar styling */
+        /* Global styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Container to hold both navbar and main */
+.container {
+    min-height: 100vh; /* Ensures it covers the entire viewport */
+}
+
+/* Navbar styles */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #fff; /* Light mode background */
+    background-color: #f0f0f0; /* Light mode background */
     color: #333; /* Light mode text color */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Box shadow for navbar */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for dark mode */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Box shadow for navbar */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav.dark {
     background-color: #333; /* Dark mode background */
     color: #fff; /* Dark mode text color */
-}
-
-/* Text styles */
-.text {
-    font-size: 1.5rem;
 }
 
 /* Toggler styles */
@@ -33,11 +40,8 @@ nav.dark {
     align-items: center;
 }
 
-/* Light and Dark labels */
-.light,
-.dark {
-    margin: 0 10px;
-    cursor: pointer;
+.light, .dark {
+    margin: 0 5px;
 }
 
 /* Slider styles */
@@ -62,13 +66,45 @@ nav.dark {
     transition: transform 0.3s ease; /* Smooth transition for the circle */
 }
 
-/* When dark mode is active */
 nav.dark .slider {
     background-color: #666; /* Slider background in dark mode */
 }
 
 nav.dark .slider-circle {
     transform: translateX(20px); /* Move circle to the right in dark mode */
+}
+
+/* Main styles */
+main {
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Main light mode styles */
+main {
+    background-color: #ffffff; /* Light mode background */
+    color: #333; /* Light mode text color */
+}
+
+/* Main dark mode styles */
+main.dark {
+    background-color: #222; /* Dark mode background */
+    color: #fff; /* Dark mode text color */
+}
+
+/* Title styles */
+.title {
+    font-size: 2em;
+}
+
+/* Facts list styles */
+.facts {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.facts li {
+    margin: 10px 0; /* Add spacing between facts */
 }
     </style>
 </head>
